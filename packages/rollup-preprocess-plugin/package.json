@@ -1,0 +1,44 @@
+{
+  "name": "@thunderal/rollup-preprocess-plugin",
+  "version": "0.0.1",
+  "description": "Rollup plugin to make build-time generated modules",
+  "main": "dist/index.mjs",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
+  "scripts": {
+    "test": "ava",
+    "build": "rollup -c",
+    "prepublish": "rm -rf dist && pnpm run build"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "rollup",
+    "plugin",
+    "preprocess",
+    "modules"
+  ],
+  "author": "ThunderAl <community@thunderal.net>",
+  "license": "MIT",
+  "dependencies": {
+    "@rollup/pluginutils": "^5.0.0"
+  },
+  "peerDependencies": {
+    "rollup": "^2.0.0||^3.0.0"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
+  "peerDependenciesMeta": {
+    "rollup": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "rollup": "^3.10.1"
+  }
+}
