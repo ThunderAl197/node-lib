@@ -1,0 +1,11 @@
+{
+  "name": "@thunderal/node-lib",
+  "description": "ThunderAl NodeJS common helpers/libs",
+  "private": true,
+  "author": "ThunderAl <community@thunderal.net>",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "node scripts/disallow-non-pnpm.js",
+    "security": "pnpm audit --audit-level=high"
+  }
+}
